@@ -32,7 +32,7 @@ public class LogbackLogger {
         logger.info("Driver process completed successfully");
     }
 
-    public static void displayError(Exception errorType) {
-        logger.error("Error occured: {}", errorType);
+    public static void displayError(String ex) {
+        logger.error("Error occured: {}", ex);
     }
 }

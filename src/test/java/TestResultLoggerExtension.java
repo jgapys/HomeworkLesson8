@@ -8,7 +8,7 @@ public class TestResultLoggerExtension implements TestWatcher {
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
-        logger.error("Test failed!!!");
+        logger.error("Test failed for {} !!!", context.getDisplayName());
     }
 
     @Override

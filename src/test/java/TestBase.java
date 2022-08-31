@@ -2,6 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -19,6 +20,7 @@ public class TestBase {
     }
 
     @BeforeEach
+    @ExtendWith(TestResultLoggerExtension.class)
     void setUp() {
         driver = new ChromeDriver();
         LogbackLogger.initializationNewWebDriver("ChromeDriver");
@@ -32,7 +34,7 @@ public class TestBase {
             driver.quit();
             LogbackLogger.displayQuitProcessInfo();
         } catch (Exception ex) {
-            LogbackLogger.displayError(ex);
+            LogbackLogger.displayError(String.valueOf(ex));
         }
     }
 }
