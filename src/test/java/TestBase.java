@@ -6,11 +6,15 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.logging.Level;
 
 public class TestBase {
     WebDriver driver;
+
+    private static Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeAll
     static void setDriver() {
@@ -23,18 +27,18 @@ public class TestBase {
     @ExtendWith(TestResultLoggerExtension.class)
     void setUp() {
         driver = new ChromeDriver();
-        LogbackLogger.initializationNewWebDriver("ChromeDriver");
+        logger.info("New ChromeDriver initialization");
         driver.manage().window().maximize();
-        LogbackLogger.displayMaximizeWindowInfo();
+        logger.info("Maximize browser windows");
     }
 
     @AfterEach
     void tearDown() {
         try {
             driver.quit();
-            LogbackLogger.displayQuitProcessInfo();
+            logger.info("Driver process completed successfully");
         } catch (Exception ex) {
-            LogbackLogger.displayError(String.valueOf(ex));
+            logger.error("Error occured: {}", ex);
         }
     }
 }

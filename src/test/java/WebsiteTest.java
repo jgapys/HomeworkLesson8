@@ -3,10 +3,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class WebsiteTest extends TestBase {
+
+    private static Logger logger = LoggerFactory.getLogger(WebsiteTest.class);
 
     @ParameterizedTest
     @EnumSource(value = WebsiteTitleProvider.class, names = {"SII"})
@@ -16,12 +20,12 @@ public class WebsiteTest extends TestBase {
     @Tag("regression")
     void checkTitleForSii(WebsiteTitleProvider title) {
         String websiteURL = "https:www.sii.pl";
-        LogbackLogger.displayTestInfo("sii.pl");
+        logger.info("Start testing: sii.pl");
         driver.get(websiteURL);
-        LogbackLogger.getOnWebsite(websiteURL);
+        logger.info("Get on: {}", websiteURL);
         String actualTitle = driver.getTitle();
-        LogbackLogger.displayExpectedTitle(title.toString());
-        LogbackLogger.displayActualTitle(actualTitle);
+        logger.info("Expected title: {}", title.toString());
+        logger.info("Actual title: {}", actualTitle);
         assertThat(actualTitle).isEqualTo(title.toString());
     }
 
@@ -33,12 +37,12 @@ public class WebsiteTest extends TestBase {
     @Tag("regression")
     void checkTitleForOnet(WebsiteTitleProvider title) {
         String websiteURL = "https:www.onet.pl";
-        LogbackLogger.displayTestInfo("onet.pl");
+        logger.info("Start testing: onet.pl");
         driver.get(websiteURL);
-        LogbackLogger.getOnWebsite(websiteURL);
+        logger.info("Get on: {}", websiteURL);
         String actualTitle = driver.getTitle();
-        LogbackLogger.displayExpectedTitle(title.toString());
-        LogbackLogger.displayActualTitle(actualTitle);
+        logger.info("Expected title: {}", title.toString());
+        logger.info("Actual title: {}", actualTitle);
         assertThat(actualTitle).isEqualTo(title.toString());
     }
 
@@ -50,12 +54,12 @@ public class WebsiteTest extends TestBase {
     @Tag("regression")
     void checkTitleForKotuszkowo(WebsiteTitleProvider title) {
         String websiteURL = "http:www.kotuszkowo.pl";
-        LogbackLogger.displayTestInfo("kotuszkowo.pl");
+        logger.info("Start testing: kotuszkowo.pl");
         driver.get(websiteURL);
-        LogbackLogger.getOnWebsite(websiteURL);
+        logger.info("Get on: {}", websiteURL);
         String actualTitle = driver.getTitle();
-        LogbackLogger.displayExpectedTitle(title.toString());
-        LogbackLogger.displayActualTitle(actualTitle);
+        logger.info("Expected title: {}", title.toString());
+        logger.info("Actual title: {}", actualTitle);
         assertThat(actualTitle).isEqualTo(title.toString());
     }
 
@@ -67,12 +71,12 @@ public class WebsiteTest extends TestBase {
     @Tag("regression")
     void checkTitleForFilmweb(WebsiteTitleProvider title) {
         String websiteURL = "https:www.filmweb.pl";
-        LogbackLogger.displayTestInfo("filmweb.pl");
+        logger.info("Start testing: filmweb.pl");
         driver.get(websiteURL);
-        LogbackLogger.getOnWebsite(websiteURL);
+        logger.info("Get on: {}", websiteURL);
         String actualTitle = driver.getTitle();
-        LogbackLogger.displayExpectedTitle(title.toString());
-        LogbackLogger.displayActualTitle(actualTitle);
+        logger.info("Expected title: {}", title.toString());
+        logger.info("Actual title: {}", actualTitle);
         assertThat(actualTitle).isEqualTo(title.toString());
     }
 
@@ -84,12 +88,12 @@ public class WebsiteTest extends TestBase {
     @Tag("regression")
     void checkTitleForSelenium(WebsiteTitleProvider title) {
         String websiteURL = "https:www.selenium.dev/documentation/en/webdriver/";
-        LogbackLogger.displayTestInfo("selenium.dev");
+        logger.info("Start testing: selenium.dev");
         driver.get(websiteURL);
-        LogbackLogger.getOnWebsite(websiteURL);
+        logger.info("Get on: {}", websiteURL);
         String actualTitle = driver.getTitle();
-        LogbackLogger.displayExpectedTitle(title.toString());
-        LogbackLogger.displayActualTitle(actualTitle);
+        logger.info("Expected title: {}", title.toString());
+        logger.info("Actual title: {}", actualTitle);
         assertThat(actualTitle).isEqualTo(title.toString());
     }
 }

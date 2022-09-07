@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4449599-7cf7-42e1-952d-c7e2ae6b581c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f4449599-7cf7-42e1-952d-c7e2ae6b581c" name="Changes" comment="Improving test result logger extension">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LogbackLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LogbackLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestResultLoggerExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestResultLoggerExtension.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebsiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebsiteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +35,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/trainings/HomeworkLesson6"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/trainings/HomeworkLesson6&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -109,8 +104,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WebsiteTest" />
-        <item itemvalue="JUnit.WebsiteTest.checkTitleForOnet" />
         <item itemvalue="JUnit.WebsiteTest.checkTitleForSii" />
+        <item itemvalue="JUnit.WebsiteTest.checkTitleForOnet" />
         <item itemvalue="JUnit.WebsiteTest.checkTitleForKotuszkowo" />
         <item itemvalue="JUnit.WebsiteTest.checkTitleForOnet (1)" />
       </list>
@@ -125,6 +120,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661941174888</updated>
     </task>
+    <task id="LOCAL-00001" summary="Improving test result logger extension">
+      <created>1661974282052</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661974282052</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,5 +140,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Improving test result logger extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improving test result logger extension" />
   </component>
 </project>
