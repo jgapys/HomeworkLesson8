@@ -24,7 +24,6 @@ public class TestBase {
     }
 
     @BeforeEach
-    @ExtendWith(TestResultLoggerExtension.class)
     void setUp() {
         driver = new ChromeDriver();
         logger.info("New ChromeDriver initialization");
