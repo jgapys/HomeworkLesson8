@@ -7,11 +7,11 @@ import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
 
-public enum PropertiesStore {
+public enum PropertyStore {
     BROWSER("browser"),
     BROWSER_WEBELEMENT_TIMEOUT("browser.webelement.timeout"),
     BROWSER_HEADLESS("browser.headless"),
-    BROWSER_ATTACHSCREENSHOT("browser.attachscreenshot"),
+    BROWSER_ATTACH_SCREENSHOT("browser.attachscreenshot"),
     ENVIRONMENT("environment");
 
     private String value;
@@ -21,7 +21,7 @@ public enum PropertiesStore {
 
     private static Properties properties = null;
 
-    private PropertiesStore(String key) {
+    private PropertyStore(String key) {
         this.propertyKey = key;
         this.value = this.retrieveValue(key);
     }
